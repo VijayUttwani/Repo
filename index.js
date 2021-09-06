@@ -169,6 +169,11 @@ const saveEditChanges = (event) => {
   
   localStorage.setItem("tasky",JSON.stringify({cards:globalStore}));
 
+  taskTitle.setAttribute("contenteditable", "false");
+  taskDescription.setAttribute("contenteditable", "false");
+  taskType.setAttribute("contenteditable", "false");
+  submitButton.removeAttribute("onclick");
+  submitButton.innerHTML = "Open Task";
 };
 
  
