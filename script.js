@@ -5,19 +5,19 @@ let globalStore = [];
 const generateNewCard = (taskData) => `
 <div class="col-md-6 col-lg-4" >
         <div class="card text-center">
-          <div class="card-header d-flex justify-content-end gap-2">
+          <div class="card-header d-flex justify-content-end gap-2 p-3 bg-dark text-white">
             <button type="button" class="btn btn-outline-success" id=${taskData.id} onclick ="editCard.apply(this, arguments)">
             <i class="fas fa-pencil-alt" id=${taskData.id} onclick ="editCard.apply(this, arguments)"></i></button>
             <button type="button" class="btn btn-outline-danger" id=${taskData.id} onclick ="deleteCard.apply(this, arguments)">
             <i class="fas fa-trash-alt" id=${taskData.id} onclick ="deleteCard.apply(this, arguments)"></i></button>
           </div>
           <img src=${taskData.imageUrl} class="card-img-top" alt="...">
-          <div class="card-body">
+          <div class="card-body p-3 bg-dark text-white">
             <h5 class="card-title">${taskData.taskTitle}</h5>
             <p class="card-text">${taskData.taskDescription}</p>
             <a href="#" class="btn btn-primary">${taskData.taskType}</a>
           </div>
-          <div class="card-footer">
+          <div class="card-footer p-3 bg-dark text-white">
             <button type="button" class="btn btn-outline-primary float-end" id=${taskData.id}>Open Task</button>
           </div>
         </div>
